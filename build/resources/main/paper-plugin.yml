@@ -1,0 +1,11 @@
+api-version: "1.21"
+name: Serverplugin
+version: 0.1-alpha
+main: de.alex_mhr.serverplugin.Serverplugin
+author: Alex_mhr
+dependencies:
+  server:
+    CommandAPI:
+      load: BEFORE
+      required: true
+      join-classpath: true
