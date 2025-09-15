@@ -30,8 +30,11 @@ public class Druckplattefunktion implements Listener {
 
                 //Dadurch bekommt man die Postion des Checkponits aud einer anderen Class
                 Location checkpoint = Checkpoint.getCheckpoint(player);
-                //Der Spieler wird an die location telpotieren
-                player.teleportAsync(checkpoint);
+
+                if (checkpoint != null) {
+                    //Der Spieler wird an die location telpotieren
+                    player.teleportAsync(checkpoint);
+                }
             }
         }
     }
