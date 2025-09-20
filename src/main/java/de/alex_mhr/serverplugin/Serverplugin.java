@@ -1,8 +1,6 @@
 package de.alex_mhr.serverplugin;
 
 import de.alex_mhr.serverplugin.Commands.GiveNavigatorCommand;
-import de.alex_mhr.serverplugin.Commands.OpenJumpAndRunGui;
-import de.alex_mhr.serverplugin.Commands.openNavigatorCommand;
 import de.alex_mhr.serverplugin.Events.NonOpEvents;
 import de.alex_mhr.serverplugin.Events.QuitEvent;
 import de.alex_mhr.serverplugin.JumpandRun.*;
@@ -40,9 +38,6 @@ public final class Serverplugin extends JavaPlugin {
 
         // Nur Commands
         new GiveNavigatorCommand("Navigator").register();
-        new openNavigatorCommand("openNavigator").register();
-
-        new OpenJumpAndRunGui("openJaRGUI").register();
 
         new jrmainCommand("jr").register();
 
