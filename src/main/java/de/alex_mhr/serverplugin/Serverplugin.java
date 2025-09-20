@@ -4,6 +4,9 @@ import de.alex_mhr.serverplugin.Commands.GiveNavigatorCommand;
 import de.alex_mhr.serverplugin.Events.NonOpEvents;
 import de.alex_mhr.serverplugin.Events.QuitEvent;
 import de.alex_mhr.serverplugin.JumpandRun.*;
+import de.alex_mhr.serverplugin.JumpandRun.Gui.JumpandRunGUI;
+import de.alex_mhr.serverplugin.JumpandRun.Itemfunction.Bettfunktion;
+import de.alex_mhr.serverplugin.JumpandRun.Itemfunction.Druckplattefunktion;
 import de.alex_mhr.serverplugin.Navigator.GiveNavigator;
 import de.alex_mhr.serverplugin.Navigator.NavigatorFunktion;
 import org.bukkit.Bukkit;
@@ -33,8 +36,6 @@ public final class Serverplugin extends JavaPlugin {
         pluginManager.registerEvents(new Checkpoint(), this);
         pluginManager.registerEvents(new Ziel(), this);
         pluginManager.registerEvents(new JumpandRunGUI(), this);
-        pluginManager.registerEvents(new CheckpointCounter(), this);
-        pluginManager.registerEvents(new ResetCounter(), this);
 
         // Nur Commands
         new GiveNavigatorCommand("Navigator").register();

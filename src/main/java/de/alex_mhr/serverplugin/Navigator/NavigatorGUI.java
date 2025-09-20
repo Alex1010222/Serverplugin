@@ -2,10 +2,9 @@ package de.alex_mhr.serverplugin.Navigator;
 
 import com.github.stefvanschie.inventoryframework.gui.GuiItem;
 import com.github.stefvanschie.inventoryframework.gui.type.ChestGui;
-import com.github.stefvanschie.inventoryframework.gui.type.util.Gui;
 import com.github.stefvanschie.inventoryframework.pane.OutlinePane;
 import com.github.stefvanschie.inventoryframework.pane.Pane;
-import de.alex_mhr.serverplugin.JumpandRun.JumpandRunGUI;
+import de.alex_mhr.serverplugin.JumpandRun.Gui.JumpandRunGUI;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;

@@ -11,10 +11,7 @@ import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.ScoreboardManager;
 
 import static de.alex_mhr.serverplugin.JumpandRun.Checkpoint.*;
-import static de.alex_mhr.serverplugin.JumpandRun.CheckpointCounter.ActivatedPlates;
-import static de.alex_mhr.serverplugin.JumpandRun.CheckpointCounter.playerCounters;
-import static de.alex_mhr.serverplugin.JumpandRun.JumpandRunGUI.switchedItem;
-import static de.alex_mhr.serverplugin.JumpandRun.ResetCounter.playerresetcounter;
+import static de.alex_mhr.serverplugin.JumpandRun.Gui.JumpandRunGUI.switchedItem;
 
 public class QuitEvent implements Listener{
 
@@ -25,10 +22,7 @@ public class QuitEvent implements Listener{
 
         playerCheckpoint.remove(player);
         activatedPlates.remove(uuid);
-        playerCounters.remove(uuid);
         switchedItem.remove(uuid);
-        ActivatedPlates.remove(uuid);
-        playerresetcounter.remove(uuid);
 
 
     }

@@ -11,13 +11,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.UUID;
 
-import de.alex_mhr.serverplugin.JumpandRun.CheckpointCounter;
-
 import static de.alex_mhr.serverplugin.JumpandRun.Checkpoint.playerCheckpoint;
 import static de.alex_mhr.serverplugin.JumpandRun.Checkpoint.activatedPlates;
-import static de.alex_mhr.serverplugin.JumpandRun.CheckpointCounter.playerCounters;
-import static de.alex_mhr.serverplugin.JumpandRun.CheckpointCounter.ActivatedPlates;
-import static de.alex_mhr.serverplugin.JumpandRun.ResetCounter.playerresetcounter;
 
 public class Ziel implements Listener {
     @EventHandler
@@ -61,9 +56,6 @@ public class Ziel implements Listener {
             //Die hashmap wird von dem Spieler gelöscht
             playerCheckpoint.remove(player);
             activatedPlates.remove(uuid);
-            playerCounters.remove(uuid);
-            ActivatedPlates.remove(uuid);
-            playerresetcounter.remove(uuid);
 
         }
     }
