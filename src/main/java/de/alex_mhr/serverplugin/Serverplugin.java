@@ -11,6 +11,7 @@ import de.alex_mhr.serverplugin.Navigator.NavigatorFunktion;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import de.alex_mhr.serverplugin.Commands.jrmainCommand;
 
 public final class Serverplugin extends JavaPlugin {
 
@@ -42,6 +43,8 @@ public final class Serverplugin extends JavaPlugin {
         new openNavigatorCommand("openNavigator").register();
 
         new OpenJumpAndRunGui("openJaRGUI").register();
+
+        new jrmainCommand("jr").register();
 
     }
 

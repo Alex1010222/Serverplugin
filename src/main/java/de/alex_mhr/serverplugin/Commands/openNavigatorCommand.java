@@ -7,9 +7,9 @@ public class openNavigatorCommand extends CommandAPICommand {
     public openNavigatorCommand(String commandName) {
         super(commandName);
 
-        executesPlayer(((player, commandArguments) -> {
+        executesPlayer((player, commandArguments) -> {
             NavigatorGUI navigatorGUI = new NavigatorGUI();
             navigatorGUI.GUI(player);
-        }));
+        });
     }
 }
