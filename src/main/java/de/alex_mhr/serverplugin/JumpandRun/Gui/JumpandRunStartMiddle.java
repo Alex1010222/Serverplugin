@@ -30,6 +30,7 @@ public class JumpandRunStartMiddle {
             player.teleportAsync(middlelocation);
         } else {
             player.sendMessage("§4 Es wurde noch kein Start festgelegt");
+            player.closeInventory();
         }
 
 

@@ -38,6 +38,7 @@ public class JumpandRunStartEasy {
             jumpandRunGUI.GUI(player);
             }else {
                 player.sendMessage("§4 Es wurde noch kein Start festgelegt");
+                player.closeInventory();
         }
     }
 }

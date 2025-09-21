@@ -26,6 +26,7 @@ public class JumpandRunStartHard {
             player.closeInventory();
         } else {
             player.sendMessage("§4 Es wurde noch kein Start festgelegt");
+            player.closeInventory();
         }
 
     }
