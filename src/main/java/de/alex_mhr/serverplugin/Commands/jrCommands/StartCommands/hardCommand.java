@@ -1,9 +1,13 @@
 package de.alex_mhr.serverplugin.Commands.jrCommands.StartCommands;
 
 import dev.jorel.commandapi.CommandAPICommand;
+import org.bukkit.Location;
 import org.bukkit.Material;
 
 public class hardCommand extends CommandAPICommand {
+
+    public static Location hardlocation;
+
     public hardCommand(String commandName) {
         super(commandName);
 
@@ -12,7 +16,10 @@ public class hardCommand extends CommandAPICommand {
             if (player.isOp()) {
 
                 var loc = player.getLocation();
+                var newlo = player.getLocation().add(0,1,0);
                 loc.getBlock().setType(Material.EMERALD_BLOCK);
+
+                hardlocation = newlo;
             }
         });
     }

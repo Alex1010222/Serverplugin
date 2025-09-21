@@ -7,6 +7,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import static de.alex_mhr.serverplugin.Commands.jrCommands.StartCommands.middleCommand.middlelocation;
 
 public class JumpandRunStartMiddle {
     public static void start(Player player) {
@@ -25,8 +26,7 @@ public class JumpandRunStartMiddle {
         bett.setItemMeta(bedmeta);
         player.getInventory().setItem(5, bett);
 
-        Location JumpandRunlocation = new Location(Bukkit.getWorld("world"), -14.5, 86, -18.5);
-        player.teleportAsync(JumpandRunlocation);
+        player.teleportAsync(middlelocation);
 
 
         player.closeInventory();

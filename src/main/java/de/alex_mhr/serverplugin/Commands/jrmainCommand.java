@@ -9,7 +9,7 @@ public class jrmainCommand extends CommandAPICommand {
     public jrmainCommand(String commandName) {
         super(commandName);
 
-        withSubcommand(new addcheckpointCommand("addcheckpoint"));
+        withSubcommand(new addcheckpointCommand("addcheckpoint")).register();
         withSubcommand(new setend("setend")).register();
         withSubcommand(new setStart("setstart")).register();
     }

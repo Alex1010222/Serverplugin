@@ -7,12 +7,14 @@ import de.alex_mhr.serverplugin.JumpandRun.*;
 import de.alex_mhr.serverplugin.JumpandRun.Gui.JumpandRunGUI;
 import de.alex_mhr.serverplugin.JumpandRun.Itemfunction.Bettfunktion;
 import de.alex_mhr.serverplugin.JumpandRun.Itemfunction.Druckplattefunktion;
+import de.alex_mhr.serverplugin.JumpandRun.Itemfunction.WarpedDruckplattefunktion;
 import de.alex_mhr.serverplugin.Navigator.GiveNavigator;
 import de.alex_mhr.serverplugin.Navigator.NavigatorFunktion;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import de.alex_mhr.serverplugin.Commands.jrmainCommand;
+import de.alex_mhr.serverplugin.Commands.sethub;
 
 public final class Serverplugin extends JavaPlugin {
 
@@ -36,11 +38,12 @@ public final class Serverplugin extends JavaPlugin {
         pluginManager.registerEvents(new Checkpoint(), this);
         pluginManager.registerEvents(new Ziel(), this);
         pluginManager.registerEvents(new JumpandRunGUI(), this);
+        pluginManager.registerEvents(new WarpedDruckplattefunktion(), this);
 
         // Nur Commands
         new GiveNavigatorCommand("Navigator").register();
-
         new jrmainCommand("jr").register();
+        new sethub("sethub").register();
 
     }
 

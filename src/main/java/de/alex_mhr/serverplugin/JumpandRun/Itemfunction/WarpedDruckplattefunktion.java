@@ -1,5 +1,6 @@
 package de.alex_mhr.serverplugin.JumpandRun.Itemfunction;
 
+import de.alex_mhr.serverplugin.JumpandRun.Checkpoint;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -8,19 +9,17 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import de.alex_mhr.serverplugin.JumpandRun.Checkpoint;
 import org.bukkit.inventory.ItemStack;
-import static de.alex_mhr.serverplugin.Commands.jrCommands.StartCommands.middleCommand.middlelocation;
+import static de.alex_mhr.serverplugin.Commands.jrCommands.StartCommands.EasyCommand.easylocation;
 
-public class Druckplattefunktion implements Listener {
-
+public class WarpedDruckplattefunktion implements Listener {
     @EventHandler
     public void onInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         Action action = event.getAction();
 
         //Wenn der Spieler in der Hand eine ... hat
-        if (player.getInventory().getItemInMainHand().getType() == Material.HEAVY_WEIGHTED_PRESSURE_PLATE) {
+        if (player.getInventory().getItemInMainHand().getType() == Material.WARPED_PRESSURE_PLATE) {
             //Wenn der Spieler Links- oder Rechtsklick macht
             if (action == Action.LEFT_CLICK_AIR ||
                     action == Action.RIGHT_CLICK_AIR ||
@@ -34,22 +33,10 @@ public class Druckplattefunktion implements Listener {
                     //Der Spieler wird an die location telpotieren
                     player.teleportAsync(checkpoint);
                 } else {
-                    player.teleportAsync(middlelocation);
+                    player.teleportAsync(easylocation);
                 }
             }
         }
     }
-    @EventHandler
-    public void onInventoryClick(InventoryClickEvent event) {
-        Player player = (Player) event.getWhoClicked();
-        ItemStack Compass = event.getCurrentItem();
-        //Wenn das Item ein Kompass ist
-        if (Compass != null && Compass.getType() == Material.HEAVY_WEIGHTED_PRESSURE_PLATE){
-            //Wenn der Spieler kein OP hat durch !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            if (!player.isOp()) {
-                //kann man das Item nicht im Inventar bewegen
-                event.setCancelled(true);
-            }
-        }
-    }
+
 }

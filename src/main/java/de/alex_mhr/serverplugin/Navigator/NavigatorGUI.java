@@ -9,6 +9,7 @@ import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import static de.alex_mhr.serverplugin.Commands.sethub.hublocation;
 
 import java.util.Collections;
 
@@ -33,11 +34,17 @@ public class NavigatorGUI {
         Grassblock.setItemMeta(meta);
 
         GuiItem spawn = new GuiItem(Grassblock,event -> {
-            event.getWhoClicked().sendRichMessage("<green>Du wurdest zum Hub telepotiert</green>");
+            event.getWhoClicked();
 
-            Location location = new Location(Bukkit.getWorld("world"), 0.5, 64, 0.5);
-            player.teleportAsync(location);
-            player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+            if (hublocation != null) {
+                player.teleportAsync(hublocation);
+                player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+                player.sendRichMessage("<green>Du wurdest zum Hub telepotiert</green>");
+                player.closeInventory();
+            } else {
+                player.sendMessage("§cEs wurde noch keine Hub-Position gesetzt.");
+            }
+
         });
         Spawn.addItem(spawn);
         gui.addPane(Spawn);

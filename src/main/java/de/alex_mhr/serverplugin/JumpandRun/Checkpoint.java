@@ -42,8 +42,6 @@ public class Checkpoint implements Listener {
             // Checkpoint setzen
             playerCheckpoint.put(player, player.getLocation());
 
-            playerCheckpoint.put(player, player.getLocation());
-
             player.sendTitle("§6Checkpoint", "",10,20,10);
             player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1, 2);
 
