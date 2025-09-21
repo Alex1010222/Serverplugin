@@ -20,9 +20,6 @@ public class GiveNavigator implements Listener {
 
         player.getInventory().clear();
 
-        Location location = new Location(Bukkit.getWorld("world"), 0.5, 64, 0.5);
-        player.teleport(location);
-
         ItemMeta meta = compass.getItemMeta();
         meta.setDisplayName("§R§BNavigator");
         meta.setEnchantmentGlintOverride(true);

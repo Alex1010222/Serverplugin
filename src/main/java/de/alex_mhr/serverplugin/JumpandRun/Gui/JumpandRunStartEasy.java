@@ -12,28 +12,32 @@ import static de.alex_mhr.serverplugin.Commands.jrCommands.StartCommands.EasyCom
 
 public class JumpandRunStartEasy {
     public static void start(Player player) {
-        player.getInventory().clear();
-        player.setGameMode(GameMode.ADVENTURE);
+        if (easylocation != null) {
+            player.getInventory().clear();
+            player.setGameMode(GameMode.ADVENTURE);
 
-        ItemStack druckplatte = new ItemStack(Material.WARPED_PRESSURE_PLATE);
-        ItemMeta meta4 = druckplatte.getItemMeta();
-        meta4.setDisplayName("§RTeleportiert dich zum letzten Checkpoint");
-        druckplatte.setItemMeta(meta4);
-        player.getInventory().setItem(3, druckplatte);
+            ItemStack druckplatte = new ItemStack(Material.WARPED_PRESSURE_PLATE);
+            ItemMeta meta4 = druckplatte.getItemMeta();
+            meta4.setDisplayName("§RTeleportiert dich zum letzten Checkpoint");
+            druckplatte.setItemMeta(meta4);
+            player.getInventory().setItem(3, druckplatte);
 
-        ItemStack bett = new ItemStack(Material.RED_BED);
-        ItemMeta bedmeta = bett.getItemMeta();
-        bedmeta.setDisplayName("§RKlicke zum aufgeben");
-        bett.setItemMeta(bedmeta);
-        player.getInventory().setItem(5, bett);
+            ItemStack bett = new ItemStack(Material.RED_BED);
+            ItemMeta bedmeta = bett.getItemMeta();
+            bedmeta.setDisplayName("§RKlicke zum aufgeben");
+            bett.setItemMeta(bedmeta);
+            player.getInventory().setItem(5, bett);
 
-        //Location JumpandRunlocation = new Location(Bukkit.getWorld("world"), -14.5, 86, -18.5);
-       // player.teleportAsync(JumpandRunlocation);
-        player.teleportAsync(easylocation);
+            //Location JumpandRunlocation = new Location(Bukkit.getWorld("world"), -14.5, 86, -18.5);
+            // player.teleportAsync(JumpandRunlocation);
+            player.teleportAsync(easylocation);
 
 
-        player.closeInventory();
-        JumpandRunGUI jumpandRunGUI = new JumpandRunGUI();
-        jumpandRunGUI.GUI(player);
+            player.closeInventory();
+            JumpandRunGUI jumpandRunGUI = new JumpandRunGUI();
+            jumpandRunGUI.GUI(player);
+            }else {
+                player.sendMessage("§4 Es wurde noch kein Start festgelegt");
+        }
     }
 }

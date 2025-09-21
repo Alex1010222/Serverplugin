@@ -15,6 +15,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import static de.alex_mhr.serverplugin.JumpandRun.Checkpoint.playerCheckpoint;
 import static de.alex_mhr.serverplugin.JumpandRun.Checkpoint.activatedPlates;
+import static de.alex_mhr.serverplugin.Commands.sethub.hublocation;
 
 public class Bettfunktion implements Listener {
 
@@ -50,7 +51,11 @@ public class Bettfunktion implements Listener {
                 //die location wird dadurch festgelegt
                 Location location = new Location(Bukkit.getWorld("world"), 0.5, 64, 0.5);
                 //der Spieler wird an die Location telepotiert
-                player.teleportAsync(location);
+                if (hublocation != null) {
+                    player.teleportAsync(hublocation);
+                } else {
+                    player.sendMessage("§cEs wurde noch keine Hub-Position gesetzt.");
+                }
                 //Der Spieler bekommt an den 4 Slot des Inventars einen Komppas von Itenstack
                 player.getInventory().setItem(4,compass);
 

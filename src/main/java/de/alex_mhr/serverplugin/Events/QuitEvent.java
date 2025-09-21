@@ -29,9 +29,5 @@ public class QuitEvent implements Listener{
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         var player = event.getPlayer();
-
-        ScoreboardManager manager = Bukkit.getScoreboardManager();
-        Scoreboard empty = manager.getNewScoreboard();
-        player.setScoreboard(empty);
     }
 }
