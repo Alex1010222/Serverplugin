@@ -1,4 +1,4 @@
-### Serverplugin
+## Serverplugin
 ##Commands
 |Commands |Description 
 |----------|-----------|
