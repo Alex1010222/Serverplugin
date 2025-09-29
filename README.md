@@ -1,6 +1,8 @@
 Readme is in work
 ### Serverplugin
 
+With this plugin you can easily create your own Jump and Run. Using the menu, you can create three different difficulties. You only have to build the blocks for the jumps, as you can define the start, the checkpoints and the end via the commands.  Important, the difficulty hard has no checkpoints.
+
 ---------------------------------------
 ##Commands
 |Commands |Description 
