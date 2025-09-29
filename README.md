@@ -11,3 +11,6 @@
 |/add Checkpoint| Create a Checkpoint at your Location|
 |/sethub | Set the Teleportocation for the Hub|
 |/giveNavigator | You get a new Navigator|
+
+-----------------------------------
+NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
