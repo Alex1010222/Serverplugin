@@ -1,5 +1,5 @@
-## Serverplugin
-#Commands
+### Serverplugin
+##Commands
 |Commands |Description 
 |----------|-----------|
 | /jr setstart easy | Set the Location for the easy Jump and Run|
@@ -9,4 +9,3 @@
 |/add Checkpoint| Create a Checkpoint at your Location|
 |/sethub | Set the Teleportocation for the Hub|
 |/giveNavigator | You get a new Navigator|
-|/openNavigator | The navigator menu opens|
